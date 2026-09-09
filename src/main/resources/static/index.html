@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Task Board</h1>
+    <p class="subtitle">Simple full-stack CRUD Kanban board</p>
+
+    <form id="addForm" autocomplete="off">
+      <input id="title" maxlength="120" placeholder="Task title" required>
+      <input id="desc" maxlength="500" placeholder="Description">
+      <button type="submit">Add Task</button>
+    </form>
+    <p id="message" class="message" role="status"></p>
+
+    <section class="board" aria-label="Task board">
+      <div class="column" data-status="TODO"><h2>To Do</h2><div class="cards" id="col-TODO"></div></div>
+      <div class="column" data-status="IN_PROGRESS"><h2>In Progress</h2><div class="cards" id="col-IN_PROGRESS"></div></div>
+      <div class="column" data-status="DONE"><h2>Done</h2><div class="cards" id="col-DONE"></div></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
