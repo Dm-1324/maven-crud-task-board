@@ -1,0 +1,19 @@
+* { box-sizing: border-box; }
+body { font-family: system-ui, sans-serif; background: #111827; color: #f9fafb; margin: 0; min-height: 100vh; }
+.container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+h1 { margin-bottom: 4px; }
+.subtitle { color: #9ca3af; margin-top: 0; }
+#addForm { display: flex; gap: 10px; margin: 28px 0 10px; flex-wrap: wrap; }
+#addForm input { flex: 1 1 220px; padding: 11px; border: 1px solid #374151; border-radius: 6px; background: #1f2937; color: #fff; }
+#addForm button { padding: 11px 18px; border: 0; border-radius: 6px; cursor: pointer; background: #60a5fa; color: #111827; font-weight: 700; }
+.message { min-height: 20px; color: #fbbf24; }
+.board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
+.column { background: #1f2937; border-radius: 10px; padding: 14px; min-height: 360px; }
+.column h2 { font-size: 16px; color: #d1d5db; margin-top: 0; }
+.card { background: #374151; border-radius: 8px; padding: 12px; margin-bottom: 9px; cursor: grab; }
+.card-title { font-weight: 700; overflow-wrap: anywhere; }
+.card-description { color: #d1d5db; margin: 7px 0; overflow-wrap: anywhere; }
+.card small { color: #9ca3af; }
+.del { float: right; border: 0; background: transparent; color: #f87171; cursor: pointer; font-size: 18px; }
+.column.dragover { outline: 2px dashed #60a5fa; outline-offset: -2px; }
+@media (max-width: 800px) { .board { grid-template-columns: 1fr; } }
