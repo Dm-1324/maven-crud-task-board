@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Voting</title>
+  <link rel="stylesheet" href="voting.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Live Voting</h1>
+    <p class="subtitle">Create polls, vote once per name, and watch results update live.</p>
+
+    <form id="createForm" autocomplete="off">
+      <input id="question" maxlength="200" placeholder="Poll question" required>
+      <input id="opt1" maxlength="100" placeholder="Option 1" required>
+      <input id="opt2" maxlength="100" placeholder="Option 2" required>
+      <button type="submit">Create Poll</button>
+    </form>
+    <p id="message" class="message" role="status"></p>
+
+    <section id="polls" aria-label="Available polls"></section>
+  </main>
+  <script src="voting-app.js"></script>
+</body>
+</html>
