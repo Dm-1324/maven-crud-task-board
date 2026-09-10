@@ -7,6 +7,6 @@ RUN mvn -B clean package
 
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
-COPY --from=build /app/target/maven-crud-task-board.jar app.jar
+COPY --from=build /app/target/online-voting.jar app.jar
 EXPOSE 8090
 ENTRYPOINT ["java", "-jar", "app.jar"]
