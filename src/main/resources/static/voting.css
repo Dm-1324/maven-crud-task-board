@@ -1,0 +1,48 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #eee;
+}
+.container {
+  width: min(900px, calc(100% - 32px));
+  margin: 40px auto;
+}
+h1 { margin-bottom: 4px; }
+.subtitle { color: #aaa; margin-top: 0; }
+form {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 8px;
+  margin: 28px 0;
+}
+input, button {
+  min-height: 40px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+input { background: #1b1b1b; color: #eee; }
+button { cursor: pointer; font-weight: 700; }
+.poll {
+  background: #1b1b2b;
+  border: 1px solid #2d2d42;
+  border-radius: 8px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+.poll h2 { margin-top: 0; font-size: 20px; }
+.voter-input { width: 100%; margin-bottom: 12px; }
+.option-row { margin: 12px 0; }
+.option-header { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 5px; }
+.bar-bg { height: 28px; background: #2a2a40; border-radius: 4px; overflow: hidden; }
+.bar-fill { height: 100%; background: #ffd166; transition: width .3s ease; }
+.actions { margin-top: 12px; display: flex; gap: 8px; }
+.error { color: #ff6c6c; min-height: 18px; margin-top: 8px; }
+.closed-tag { color: #ff6c6c; font-size: 12px; margin-left: 8px; }
+.message { min-height: 20px; }
+@media (max-width: 700px) {
+  form { grid-template-columns: 1fr; }
+  .container { margin: 24px auto; }
+}
